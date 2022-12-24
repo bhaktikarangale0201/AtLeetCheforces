@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <style>
+        .bar1 {
+            background-color: rgb(53, 163, 163);
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 5px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 25px 0 black;
+            padding: 10 px;
+            display: inline;
+            z-index: 1;
+            
+        }
+
+        .bar2 {
+            background-color: rgb(53, 163, 163);
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 60px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 25px 0 black;
+            padding: 20 px;
+            display: inline;
+            z-index: 1;
+        }
+
+        /* body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        } because of this text were aligning left of image and every element was after the given height and width*/
+
+
+        /*img {
+            height: 70%;
+            width: 70%;
+        } */
+
+        .in {
+            width: 1500px;
+            /* background-color: pink; */
+            height: 200px;
+            clear: both;
+            position: relative;
+            -webkit-transition: left 2s;
+            -moz-transition: left 2s;
+            -o-transition: left 2s;
+            transition: left 2s;
+        }
+ 
+        #slide-1:target~.in {
+            left: 0px;
+        }
+
+        #slide-2:target~.in {
+            left: -500px;
+        }
+
+        #slide-3:target~.in {
+            left: -1000px;
+        }
+
+        .slide {
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+
+        }
+
+        li {
+            display: inline;
+            padding-right: 100px;
+
+        }
+
+        /* div{
+            background-color: aquamarine;
+            width: 100%;
+        } */
+
+        .out {
+            width: 500px;
+            height: 300px;
+            /* background-color: yellow; */
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 150px;
+            text-align: center;
+            overflow: hidden;
+            /* padding: auto; */
+            border: 1px solid #dde6ed;
+            z-index: 1;
+        }
+
+        .buttons {
+            position: relative;
+            top: -20px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            border-radius: 50px;
+            background-color: lightgreen;
+        }
+        a{
+          text-decoration: none;
+        }
+
+        /* td {
+            padding-right: 50px;
+            border: 1px solid black;
+
+        }
+
+        table,
+        th {
+            border: 1px solid black;
+        } */
+
+        .row {
+            display: flex;
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+
+        .column {
+            flex: 50%;
+            padding: 5px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 16px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bar1">
+        <div>
+            <nav>
+                <ul>
+                    <li style="font-size: 30px;background-color: #dde6ed;padding-left: 50px;border: 2mm ridge rgba(220, 50, 169, 0.6);">ChatCode</li>
+                    <li><button style="color: black;border-radius: 18px;float: right;background-color: #dde6ed;"><a href="Login.html">Login/Register</a></button></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <header class="bar2">
+        <div>
+            <nav>
+                <ul>
+                    <li><button style="border-radius: 15px;"><a>Console</a></button></li>
+                    <li><button style="border-radius: 15px;"><a href="http://localhost:3000/" style="color: black;">Realtime Chat</a></button></li>
+                    
+                    <li style="float: right;"><button style="border-radius: 15px;"><a href="contact.html" style="color: black;">Contact us</a></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="out">
+        <span id="slide-1"></span>
+        <span id="slide-2"></span>
+        <span id="slide-3"></span>
+        <div class="in">
+            <img src="https://cdn.kqed.org/wp-content/uploads/sites/38/2017/06/NathanielCodes.jpg" class="slide"
+                width="500" height="300" />
+            <img src="https://th.bing.com/th/id/OIP.J3SEKP1LyT0q19yoodXBtQHaEo?w=256&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                class="slide" width="500" height="300" />
+            <img src="https://th.bing.com/th/id/OIP.uFvCOaODCLW8w5Jkzthx0gHaFC?pid=ImgDet&w=504&h=343&rs=1"
+                class="slide" width="500" height="300" />
+        </div>
+        <div class="buttons">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="column">
+          <table>
+            <tr>
+              <th>Sr. no.</th>
+              <th>Topic</th>
+              <th>Problem</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Array</td>
+              <td><a href="https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/">Reverse the array</a></td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>Array</td>
+              <td><a href="https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/">Find the maximum and minimum</a> </td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td>Array</td>
+              <td><a href="https://practice.geeksforgeeks.org/problems/kth-smallest-element5635/1">Find the "Kth" max and min element of an array</a></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Array</td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1">Kadane's Algo</a></td>
+              </tr>
+              <tr>
+                <td>5.</td>
+                <td>Array</td>
+                <td><a href="https://www.geeksforgeeks.org/median-of-two-sorted-arrays-of-different-sizes/">Median of 2 sorted arrays of different size</a></td>
+              </tr>
+              <tr>
+                <td>6.</td>
+                <td>String</td>
+                <td><a href="https://leetcode.com/problems/reverse-string/">Reverse a String</a></td>
+              </tr>
+              <tr>
+                <td>7.</td>
+                <td>String</td>
+                <td><a href="https://geeksforgeeks.org/problems/palindrome-string0817/1">Check whether a String is Palindrome or not</a></td>
+              </tr>
+              <tr>
+                <td>8.</td>
+                <td>String</td>
+                <td><a href="https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/">Rabin Karp Algo</a></td>
+              </tr>
+              <tr>
+                <td>9.</td>
+                <td>String</td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/longest-prefix-suffix2527/1">KMP Algo</a></td>
+              </tr>
+              <tr>
+                <td>10.</td>
+                <td>String</td>
+                <td><a href="https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/">Boyer Moore Algorithm for Pattern Searching.</a></td>
+              </tr>
+              <tr>
+                <td>11.</td>
+                <td>Searching & Sorting</td>
+                <td><a href="https://leetcode.com/problems/search-in-rotated-sorted-array/">Search in a rotated sorted array</a></td>
+            </tr>
+             <tr>
+                <td>12.</td>
+                <td>Searching & Sorting</td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1">Painters Partition Problem</a></td>
+            </tr>
+            <tr>
+                <td>13.</td>
+                <td>Searching & Sorting</td>
+                <td><a href="https://www.geeksforgeeks.org/searching-array-adjacent-differ-k/">Searching in an array where adjacent differ by at most k </a> </td>
+            </tr>
+            <tr> 
+                <td>14.</td>
+                <td>Searching & Sorting</td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/zero-sum-subarrays1825/1">print all subarrays with 0 sum </a> </td>
+            </tr>
+            <tr>
+                <td>15.</td>
+                <td>Searching & Sorting</td>
+                <td><a href="https://www.baeldung.com/java-sorting-arrays-with-repeated-entries">Partitioning and Sorting Arrays with Many Repeated Entries </a> </td>
+              </tr>
+          </table>
+        </div>
+        <div class="column">
+          <table>
+            <th>Sr. no.</th>
+              <th>Topic</th>
+              <th>Problem</th>
+            <tr>
+              <td>16.</td>
+              <td>LinkedList</td>
+              <td><a href="https://practice.geeksforgeeks.org/problems/reverse-a-linked-list-in-groups-of-given-size/1">Reverse a Linked List in group of Given Size.</a>            </td>
+            </tr>
+            <tr>
+                <td>17.</td>
+                <td>LinkedList</td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/remove-duplicate-element-from-sorted-linked-list/1">Remove Duplicates in a sorted Linked List.</a></td>
+              </tr>
+              <tr>
+                <td>18.</td>
+                <td>LinkedList</td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/sort-a-linked-list/1">Merge Sort For Linked lists.</a></td>
+              </tr>
+              <tr>
+                <td>19.</td>
+                <td>LinkedList</td>
+                <td><a href="https://www.geeksforgeeks.org/deletion-circular-linked-list/">Deletion from a Circular Linked List.</a> </td>
+              </tr>
+              <tr>
+                <td>20.</td>
+                <td>LinkedList</td>
+                <td><a href="https://www.geeksforgeeks.org/rotate-doubly-linked-list-n-nodes/">Rotate DoublyLinked list by N nodes.</a></td>
+              </tr>
+              <tr>
+                <td>21.</td>
+                <td>Binary Trees</td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1">Left View of a tree</a></td>
+              </tr>
+              <tr>
+                <td>22.</td>
+                <td>Binary Trees</td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1">Top View of a tree</a></td>
+              </tr>
+              <tr>
+                <td>23.</td>
+                <td>Binary Trees</td>
+                <td><a href="https://www.geeksforgeeks.org/construct-binary-tree-string-bracket-representation/">Construct Binary Tree from String with Bracket Representation</a> </td>
+              </tr>
+              <tr>
+                <td>24.</td>
+                <td>Binary Trees</td>
+                <td><a href="https://www.geeksforgeeks.org/maximum-sum-nodes-binary-tree-no-two-adjacent/">Maximum Sum of nodes in Binary tree such that no two are adjacent </a>  </td>
+              </tr>
+              <tr>
+                <td>25.</td>
+                <td>Binary Trees</td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/check-if-tree-is-isomorphic/1">Tree Isomorphism Problem </a>  </td>
+              </tr>
+              <tr>
+                <td>26.</td>
+                <td>Graph</td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1">Implement BFS algorithm </a></td>
+              </tr>
+              <tr>
+                <td>27.</td>
+                <td>Graph</td>
+                <td><a href="https://www.geeksforgeeks.org/detect-cycle-in-a-graph/">Detect Cycle in Directed Graph using BFS/DFS Algo </a> </td>
+              </tr>
+              <tr>
+                <td>28.</td>
+                <td>Graph</td>
+                <td><a href="https://www.geeksforgeeks.org/detect-negative-cycle-graph-bellman-ford/">Detect Negative cycle in a graph </a></td>
+              </tr>
+              <tr>
+                <td>29.</td>
+                <td>Graph</td>
+                <td><a href="https://www.hackerearth.com/practice/algorithms/graphs/topological-sort/practice-problems/algorithm/oliver-and-the-game-3/">Oliver and the Game</a> </td>
+              </tr>
+              <tr>
+                <td>30.</td>
+                <td>Graph</td>
+                <td><a href="https://www.geeksforgeeks.org/two-clique-problem-check-graph-can-divided-two-cliques/">Two Clique Problem</a></td>
+              </tr>
+          </table>
+        </div>
+      </div>
+    <!-- <script>
+      var slideIndex = 0;
+showSlides(); // call showslide method
+
+function showSlides()
+{
+	var i;
+
+	// get the array of divs' with classname image-sliderfade
+	var slides1 = document.getElementsById("slide-1");
+  var slides2 = document.getElementsById("slide-2");
+  var slides3 = document.getElementsById("slide-3");
+	slides1.addEventListner('clicked',()=> console.log("clicked1"));
+	// get the array of divs' with classname dot
+	for (i = 0; i < 100; i++) {
+		// initially set the display to
+		// none for every image.
+	}
+
+	slides2.addEventListner('clicked',()=> console.log("clicked1"));
+	// get the array of divs' with classname dot
+	for (i = 0; i < 100; i++) {
+		// initially set the display to
+		// none for every image.
+	}
+  slides3.addEventListner('clicked',()=> console.log("clicked1"));
+	// get the array of divs' with classname dot
+	for (i = 0; i < 100; i++) {
+		// initially set the display to
+		// none for every image.
+	}
+
+	// Change image every 2 seconds
+	setTimeout(showSlides, 2000);
+}
+</script> -->
+
+
+
+
+</body>
+
+</html>
