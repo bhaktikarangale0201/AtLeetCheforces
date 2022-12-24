@@ -4,5 +4,5 @@ and we never figure it out.
 
 This might be caused by our immediate surroundings.
 So in order to establish an environment,
-Icreated a using a coding platform where you can have a 
+created a using a coding platform where you can have a 
 live chat conversation with others who share your interests.
