@@ -7,7 +7,7 @@ So in order to establish an environment,
 created a using a coding platform where you can have a 
 live chat conversation with others who share your interests.
 
-📝Workflow and Flowchart of Web Application : 
+# 📝Workflow and Flowchart of Web Application : 
 
 1.	When the server starts it creates a main thread for listening to petitions and the open port on which it is running.
 
@@ -30,7 +30,7 @@ communication is made using server(socket.io).
 ![WorkFlow](https://user-images.githubusercontent.com/86736389/225015291-11be6028-7fee-461f-b1e2-ed11b3bbad27.png)
 
 
-📝Result :
+# 📝Result :
 
 ![Result1](https://user-images.githubusercontent.com/86736389/225016051-66c12030-96ce-405c-9799-6c189388037b.jpg)
 ![Result2](https://user-images.githubusercontent.com/86736389/225016063-664b021a-cd36-462c-aff0-52051ef6c439.jpg)
